@@ -1,0 +1,945 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(229 229 229);
+  margin: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* main card */
+
+.PageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Main-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Main-card {
+  width: 93%;
+  margin-top: 2.5%;
+  border: 1.5px solid rgb(229 229 229);
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+}
+
+.Main-card .header-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  height: 70px;
+}
+
+.Main-card .header-2 a {
+  font-weight: 600;
+  margin-left: 10px;
+  margin-right: 6px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.Main-card .header-2 p {
+  font-size: 11px;
+  color: grey;
+  margin-top: 17px;
+}
+
+.Main-card .button {
+  background-color: white;
+  border: 1px solid rgb(229 229 229);
+  margin: 0px 5px;
+  border-radius: 4px;
+}
+
+.Main-card .button:hover {
+  background-color: rgba(238, 238, 238, 0.544);
+}
+
+.Main-card .buttons-container {
+  margin-left: auto;
+}
+
+.Main-card .header {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px 12px;
+}
+
+/* page content */
+
+.page-content-container {
+  background-color: #fff;
+  width: 93%;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.page-content-container .links-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  width: auto;
+}
+
+.page-content-container .links-container a {
+  padding: 6px 12px;
+  text-decoration: none;
+  font-size: 13px;
+  width: 190px;
+}
+
+.page-content-container .links-container a i {
+  margin-right: 13px;
+  color: rgb(146, 146, 146);
+}
+
+.page-content-container .links-container .link-inactive {
+  background-color: rgba(238, 238, 238, 0.544);
+  border-bottom: 1px solid rgb(229, 229, 229);
+  border-right: 1px solid rgb(229, 229, 229);
+  border-left: 1px solid rgb(229, 229, 229);
+}
+
+.page-content-container .links-container .link-active {
+  border-left: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.page-content-container .links-container div {
+  height: 100%;
+  background-color: rgb(229 229 229);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-content-container .links-container div p {
+  color: #0d6efd;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.page-content-container .links-container div p:hover {
+  text-decoration: underline;
+}
+
+.page-content-container .links-container div i {
+  color: rgb(132, 132, 132);
+  margin-bottom: 125px;
+}
+
+/* navbar */
+.NavBar {
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  margin-left: auto;
+  line-height: 60px;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0px 4px 4px -3px rgba(18, 18, 18, 0.27);
+  box-shadow: 0px 4px 4px -3px rgba(18, 18, 18, 0.27);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.NavBar a,
+.NavLink .link-inactive {
+  padding: 8px 16px;
+  color: rgb(118, 118, 118);
+  text-decoration: none;
+}
+
+.NavBar .link-active {
+  background-color: rgba(193, 193, 193, 0.396);
+  box-shadow: inset 1px 1px 10px rgb(150, 149, 149);
+}
+
+.NavBar a:hover {
+  background-color: rgba(191, 191, 191, 0.512);
+}
+
+.NavBar a i {
+  margin: 0 7px;
+  font-size: 18px;
+}
+
+/* navbar-end */
+
+/* sidebar */
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgb(83, 83, 255);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* sidebar-end */
+
+/* summary-card */
+
+.summary-card {
+  width: 40%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  border-left: 5px rgb(72, 72, 255) solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px 20px;
+  font-weight: bold;
+  text-align: left;
+  /* float: left; */
+  margin-left: 20px;
+  -webkit-box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+}
+
+.summary-card .header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.summary-card .content {
+  padding-top: 20px;
+}
+.summary-card .value {
+  float: right;
+}
+
+.summary-card .group-name {
+  font-size: 25px;
+}
+
+/* summary-card-end */
+
+/* JournalEntrie */
+
+.JournalEntrie {
+  border: 1px solid rgba(0, 0, 0, 0.486);
+  padding: 5px;
+  display: flex;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.JournalEntrie p {
+  margin-left: 30px;
+}
+
+/* .JournalEntrie #Debit {
+  margin-left: 30px;
+  border: 1px solid red;
+}
+.JournalEntrie #Credit {
+  margin-left: 30px;
+  border: 1px solid red;
+} */
+
+/* Journal-Entrie-end */
+
+.container-r {
+  border: green 1px solid;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  border-left: 5px rgb(72, 72, 255) solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px 10px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20px;
+  -webkit-box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+}
+
+.search-box {
+  width: 33%;
+}
+
+/* Journal Entries card */
+
+.JournalEntries-card {
+  width: 1000px;
+  margin-top: 3%;
+  border-radius: 7px;
+  border: 1.5px solid rgb(229 229 229);
+  background-color: rgba(238, 238, 238, 0.544);
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.JournalEntries-card .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 4px 2px -2px rgb(212, 212, 212);
+  height: 50px;
+}
+
+.JournalEntries-card .header .search-box {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.JournalEntries-card .header .search-box input {
+  margin-right: 2px;
+  padding: 4px 8px;
+}
+
+.JournalEntries-card .header .search-button {
+  background-color: #fff;
+  border: 1px solid rgb(229 229 229);
+  border-radius: 4px;
+  font-size: 12px;
+  width: 60px;
+}
+
+.JournalEntries-card .header .search-button:hover {
+  background-color: rgba(189, 189, 189, 0.468);
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.JournalEntries-card .header .button {
+  border: 1px solid rgb(229 229 229);
+  background-color: #fff;
+  border-radius: 4px;
+  width: 120px;
+  height: 30px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.JournalEntries-card .header .button:hover {
+  background-color: rgba(189, 189, 189, 0.468);
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.JournalEntries-card .header p {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.JournalEntries-card .body {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.JournalEntries-card .body .button {
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(0, 128, 255);
+  border: 1px solid rgb(0, 107, 214);
+  color: white;
+  font-weight: 700;
+  height: 50px;
+  width: 180px;
+}
+
+.JournalEntries-card .body .button:hover {
+  background-color: rgb(2, 105, 208);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table button {
+  background-color: #fff;
+  border: 1px solid rgb(229 229 229);
+  border-radius: 4px;
+  font-size: 12px;
+  width: 100%;
+}
+
+table button:hover {
+  background-color: rgba(189, 189, 189, 0.468);
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.body td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: rgb(132, 132, 132);
+  font-size: 14px;
+}
+
+.JournalEntries-card .body #td-1 {
+  width: 7%;
+  text-align: center;
+}
+
+.JournalEntries-card .body #td-2 {
+  width: 7%;
+  text-align: center;
+}
+
+.JournalEntries-card .body #td-3 {
+  width: 10%;
+  text-align: center;
+}
+
+.JournalEntries-card .body #td-4 {
+  width: 50%;
+}
+
+.JournalEntries-card .body #td-5 {
+  text-align: end;
+}
+
+.JournalEntries-card .body #td-6 {
+  text-align: end;
+}
+
+.JournalEntries-card .body #td-7 {
+  text-align: center;
+}
+
+.JournalEntries-card .footer {
+  border-top: 1px solid rgb(180, 180, 180);
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.JournalEntries-card .footer .entries-counter-span {
+  border: 1px solid rgb(229 229 229);
+  width: 20px;
+  height: 22px;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: 10px;
+  font-size: 13px;
+  color: rgb(229 229 229);
+  text-align: center;
+}
+
+.JournalEntries-card .footer .button {
+  height: 20px;
+  width: 80px;
+  border: 1px solid rgb(229 229 229);
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-right: 4px;
+  color: rgb(153, 153, 153);
+}
+
+.JournalEntries-card .footer .button:hover {
+  background-color: rgba(164, 164, 164, 0.407);
+}
+
+/* create new journal entry */
+
+.CreateNewJournalEntry-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.CreateNewJournalEntry-card {
+  width: 900px;
+  margin-top: 5%;
+  border-radius: 7px;
+  border: 1.5px solid rgb(229 229 229);
+  background-color: rgba(238, 238, 238, 0.544);
+  margin-right: 60px;
+  margin-bottom: 50px;
+}
+
+.CreateNewJournalEntry-card .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 4px 2px -2px rgb(212, 212, 212);
+  height: 50px;
+}
+
+#remove-margin-CreateNewJournalEntry {
+  margin-bottom: -4%;
+}
+
+.CreateNewJournalEntry-card .header-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  height: 50px;
+}
+
+.CreateNewJournalEntry-card .header-2 a {
+  font-weight: 600;
+  margin-left: 10px;
+  margin-right: 6px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.CreateNewJournalEntry-card .header-2 p {
+  font-size: 11px;
+  color: grey;
+  margin-top: 17px;
+}
+
+.CreateNewJournalEntry-card .header p {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.CreateNewJournalEntry-card .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-top: 35px;
+}
+
+.CreateNewJournalEntry-card .body .button {
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.CreateNewJournalEntry-card .body .button:hover {
+  background-color: rgb(203, 203, 203);
+  border: 1px solid #909090;
+}
+
+.CreateNewJournalEntry-card .body label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.CreateNewJournalEntry-card .body .input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CreateNewJournalEntry-card .body .input-container:nth-of-type(1) {
+  margin-right: 10px;
+}
+
+.CreateNewJournalEntry-card .body .input-group-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.CreateNewJournalEntry-card .body .input-group-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.CreateNewJournalEntry-card .body .merge-inputs-addon {
+  padding: 5px 11px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.CreateNewJournalEntry-card .body #text-input {
+  text-align: center;
+}
+
+.CreateNewJournalEntry-card .body #text-input-1 {
+  width: 550px;
+}
+
+.CreateNewJournalEntry-card .body input,
+select,
+textarea,
+.JournalEntries-card .header input {
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+.CreateNewJournalEntry-card .body input:focus,
+textarea:focus,
+.JournalEntries-card .header input:focus {
+  outline: 1px solid #5879dd;
+  box-shadow: 1px 1px 20px rgba(72, 152, 227, 0.663);
+}
+
+.CreateNewJournalEntry-card .body select {
+  width: 200px;
+  height: 27px;
+}
+
+.CreateNewJournalEntry-card .body #number-input {
+  margin-right: 5px;
+}
+
+.CreateNewJournalEntry-card .body #Debit-result {
+  background-color: rgba(150, 150, 150, 0.521);
+  text-align: end;
+}
+
+.CreateNewJournalEntry-card .body #Credit-result {
+  background-color: rgba(150, 150, 150, 0.521);
+  text-align: end;
+  margin-right: 5px;
+}
+
+.CreateNewJournalEntry-card .body .Credit-Debit-results {
+  width: 616px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-top: -10px;
+}
+
+.CreateNewJournalEntry-card .footer {
+  border-top: 1px solid rgb(180, 180, 180);
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 14px;
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(1) {
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(0, 128, 255);
+  border: 1px solid rgb(0, 107, 214);
+  color: white;
+  height: 30px;
+  width: 70px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(1):hover {
+  background-color: rgb(0, 104, 209);
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(2) {
+  border: none;
+  border-radius: 3px;
+  background-color: none;
+  border: 1px solid rgb(180, 180, 180);
+  color: rgb(0, 0, 0);
+  height: 30px;
+  width: 150px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(2):hover {
+  border: 1px solid rgb(105, 105, 105);
+}
+
+.fa-caret-right {
+  color: rgba(171, 170, 170, 0.702);
+  margin-right: 10px;
+}
+
+.fa-xmark {
+  transform: translateY(25px);
+  margin-left: 10px;
+  color: rgb(170, 170, 170);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.fa-xmark:hover {
+  color: rgb(126, 126, 126);
+}
+
+.checkbox-label {
+  margin-left: 8px;
+  transform: translateY(-2.5px);
+}
+
+/* view journal entry */
+
+.JournalEntries-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.JournalEntries-card .header .button-viewJournalEntry {
+  background-color: #fff;
+  border: 1px solid rgb(229 229 229);
+  margin-right: 7px;
+  border-radius: 4px;
+}
+
+.JournalEntries-card .header .button-viewJournalEntry:hover {
+  background-color: rgb(203, 203, 203);
+  border: 1px solid #909090;
+}
+
+.JournalEntries-card .header .backward-forward-icons button {
+  background-color: #fff;
+  border: 1px solid rgb(229 229 229);
+  width: 70px;
+}
+
+.JournalEntries-card .header .backward-forward-icons button:hover {
+  background-color: rgb(203, 203, 203);
+  border: 1px solid #909090;
+}
+
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(1),
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(3) {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(2),
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(4) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.JournalEntries-card .header .backward-forward-icons span {
+  margin: 0 10px;
+  color: #909090;
+}
+
+.JournalEntries-card .body .paper {
+  height: 400px;
+  width: 100%;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgb(146, 146, 146);
+}
+
+.JournalEntries-card .body .paper .paper-header {
+  text-align: start;
+  padding: 35px;
+}
+
+.JournalEntries-card .body .paper span {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.JournalEntries-card .body .paper span div:nth-of-type(1) {
+  margin-right: 20px;
+}
+
+.JournalEntries-card .body .paper span div:nth-of-type(2) h1 {
+  border-left: 1px solid black;
+  margin: 0;
+  padding-left: 20px;
+  margin-right: 30px;
+}
+
+.JournalEntries-card .body .paper span div:nth-of-type(2) p {
+  border-left: 1px solid black;
+  margin: 0;
+  padding-left: 20px;
+  margin-right: 50px;
+}
+
+.JournalEntries-card .body .paper .view-table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.JournalEntries-card .body .paper .view-table {
+  width: 90%;
+}
+
+.JournalEntries-card .body .paper .view-table td,
+.JournalEntries-card .body .paper .view-table th {
+  border-color: black;
+  color: black;
+}
+
+.JournalEntries-card .body .paper .view-table th {
+  border-color: black;
+}
+
+.Update-button {
+  background-color: rgb(62, 186, 24) !important;
+  border: 1px solid rgb(53, 160, 20) !important;
+  color: #fff !important;
+  width: 80px !important;
+  height: 35px !important;
+}
+
+.Update-button:hover {
+  background-color: rgb(53, 156, 21) !important;
+  border: 1px solid rgb(49, 147, 19) !important;
+}
+
+.Delete-button {
+  background-color: red !important;
+  color: #fff !important;
+  width: 80px !important;
+  height: 35px !important;
+}
+
+.Delete-button:hover {
+  background-color: rgb(190, 0, 0);
+  border: none !important;
+}
+
+/* Reports */
+
+.Reports-card {
+  margin-top: 50px;
+  display: flex;
+}
+
+.Reports-card .body-content .JournalEntries-card {
+  width: 440px;
+  height: 50px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.Reports-card .body-content .JournalEntries-card .header {
+  box-shadow: none;
+}
+
+.Reports-card .body-content .JournalEntries-card p {
+  margin-top: 18px;
+}
+
+.Reports-card .body-content .JournalEntries-card .body {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 1px solid rgb(229 229 229);
+  border-right: 1px solid rgb(229 229 229);
+  border-bottom: 1px solid rgb(229 229 229);
+  transform: translate(-2px, -2px);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.Reports-card .body-content .JournalEntries-card .body a {
+  width: 100%;
+  text-decoration: none;
+  background-color: rgba(245 245 245, 0.5);
+  border-bottom: 1px solid rgb(229 229 229);
+  padding: 6px 12px;
+  font-size: 15px;
+}
+
+.Reports-card .body-content .JournalEntries-card .body a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+
+.Reports-card .body-content .JournalEntries-card .body a:hover {
+  background-color: rgb(245 245 245);
+}
+
+.Reports-card #div-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Reports-card #div-container .body-content:nth-of-type(2) .JournalEntries-card {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+/* reports view paper */
+
+.full-width-lis b {
+  display: flex;
+}
+
+.full-width-lis b span {
+  margin-left: auto;
+  margin-right: 15px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: inline;
+  width: 10%;
+}
+
+.full-width-lis li {
+  display: flex;
+  margin-bottom: 7px;
+}
+
+.full-width-lis li span {
+  margin-left: auto;
+  margin-right: 15px;
+  color: rgb(12, 121, 180);
+}
+
+#Net-profit {
+  display: flex;
+  justify-content: center;
+}
+
+#Net-profit p {
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+  width: 95%;
+}
+
+#Net-profit p span {
+  margin-left: auto;
+}
